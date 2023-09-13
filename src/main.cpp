@@ -35,6 +35,19 @@ const double calculate_accuracy(const Matrix<unsigned char>& images, const Matri
   return accuracy;
 }
 
+#ifdef TESTS
+#include <gtest/gtest.h>
+
+TEST(FunctionTesting, test_arctg) {
+  std::vector<double> test = {-1, 0, 1}
+  EXPECT_NEAR(NeuralNetwork.arctg(test), new std::vector<double>{-0.785398, 0, 0.785398},1e-6);
+
+  test = {}
+  EXPECT_NEAR(addend1(1),0.54030230586,1e-6);
+  EXPECT_NEAR(addend1(-1),-0.54030230586,1e-6);
+}
+#endif
+
 int main() {
     Matrix<unsigned char> images_train(0, 0);
     Matrix<unsigned char> labels_train(0, 0);

@@ -12,6 +12,9 @@ sigmoid:
 arctg:
 	g++ $(FLAGS) -DARCTG -Ofast $(SRC) -I include -o main
 
+test:
+	g++ $(FLAGS) -DTESTS -Ofast $(SRC) -I include -o main
+
 all: sigmoid
 
 debug:
