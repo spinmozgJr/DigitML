@@ -43,17 +43,17 @@ double arctg(double x) {
 #include "gtest/gtest.h"
 
 TEST(FunctionTesting, test_arctg1) {  
-  EXPECT_EQ(arctg(-1), -0.785398)
+  EXPECT_EQ(arctg(-1), -0.785398);
 }
 
 TEST(FunctionTesting, test_arctg2) {  
-  EXPECT_EQ(arctg(0), 0)
+  EXPECT_EQ(arctg(0), 0);
 }
 
 std::vector<double> test = {-1, 0, 1}
 
 TEST(FunctionTesting, test_count_arctg) {  
-  EXPECT_EQ(NeuralNetwork.arctg(test).size(), 3)
+  EXPECT_EQ(NeuralNetwork.arctg(test).size(), 3);
 }
 
 TEST(FunctionTesting, test_vector_of_artcg) {
@@ -62,7 +62,7 @@ TEST(FunctionTesting, test_vector_of_artcg) {
 
 test = {};
 TEST(FunctionTesting, test_empty_vector) {
-  EXPECT_EQ(NeuralNetwork.arctg(test).size(), 0)
+  EXPECT_EQ(NeuralNetwork.arctg(test).size(), 0);
 }
 //EXPECT_NEAR(addend1(-1),-0.54030230586,1e-6);
 //EXPECT_NEAR(NeuralNetwork.arctg(test), new std::vector<double>{}, 1e-6);
