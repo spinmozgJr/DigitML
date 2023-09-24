@@ -52,18 +52,18 @@ TEST(FunctionTesting, test_arctg2) {
   EXPECT_EQ(arctg(0), 0);
 }
 
-std::vector<double> test = {-1, 0, 1};
-
 TEST(FunctionTesting, test_count_arctg) {  
+  std::vector<double> test = {-1, 0, 1};
   EXPECT_EQ(n.arctg(test).size(), 3);
 }
 
 TEST(FunctionTesting, test_vector_of_artcg) {
-  EXPECT_EQ(n.arctg(test), new std::vector<double>{-0.785398, 0, 0.785398}, 1e-6);
+  std::vector<double> test = {-1, 0, 1};
+  EXPECT_EQ(n.arctg(test), new std::vector<double>{-0.785398, 0, 0.785398});
 }
 
-test.clear();
 TEST(FunctionTesting, test_empty_vector) {
+  std::vector<double> test = {};
   EXPECT_EQ(n.arctg(test).size(), 0);
 }
 //EXPECT_NEAR(addend1(-1),-0.54030230586,1e-6);
