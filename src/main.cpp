@@ -40,7 +40,7 @@ double arctg(double x) {
 }
 
 #ifdef TESTS
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 
 NeuralNetwork n;
 
@@ -62,7 +62,7 @@ TEST(FunctionTesting, test_count_arctg) {
 TEST(FunctionTesting, test_vector_of_artcg) {
   std::vector<double> test1 = {-1, 0, 1};
   std::vector<double> test2 = {-0.785398, 0, 0.785398};
-  ::testing::ASSERT_THAT(n.arctg(test1), ::testing::Eq(test2));
+  ::testing::EXPECT_THAT(n.arctg(test1), ::testing::Eq(test2));
   //EXPECT_DOUBLE_EQ(n.arctg(test1), test2);
 }
 
