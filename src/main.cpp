@@ -59,10 +59,10 @@ TEST(FunctionTesting, test_count_arctg) {
 }
 
 TEST(FunctionTesting, test_vector_of_artcg) {
-  EXPECT_NEAR(n.arctg(test), new std::vector<double>{-0.785398, 0, 0.785398}, 1e-6);
+  EXPECT_EQ(n.arctg(test), new std::vector<double>{-0.785398, 0, 0.785398}, 1e-6);
 }
 
-test = {};
+test.clear();
 TEST(FunctionTesting, test_empty_vector) {
   EXPECT_EQ(n.arctg(test).size(), 0);
 }
