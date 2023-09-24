@@ -23,7 +23,7 @@ jobs:
       run: make 
     - name: run standart activate function
       run: ./main
-    - name: make hyperbolic tangent activate function
-      run: make hyper_tan
-    - name: run hyperbolic tangent activate function
+    - name: make arctg tangent activate function
+      run: make arctg
+    - name: run arctg tangent activate function
       run: ./main
