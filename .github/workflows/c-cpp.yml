@@ -2,9 +2,9 @@ name: C/C++ CI
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "Konopkin_ks40" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "Konopkin_ks40" ]
 
 jobs:
   build:
@@ -13,5 +13,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: make
-      run: make
+    - name: installation
+      run: sudo apt install -y googletest libgtest-dev build-essential gcovr
+    - name: compill unit tests
+      run: make test
+    - name: run unit tests
+      run: ./main
+    - name: make standart activate function
+      run: make 
+    - name: run standart activate function
+      run: ./main
+    - name: make hyperbolic tangent activate function
+      run: make hyper_tan
+    - name: run hyperbolic tangent activate function
+      run: ./main
