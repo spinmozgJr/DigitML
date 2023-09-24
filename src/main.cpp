@@ -45,7 +45,7 @@ double arctg(double x) {
 NeuralNetwork n;
 
 TEST(FunctionTesting, test_arctg1) {  
-  EXPECT_EQ(arctg(-1), -0.785398);
+  EXPECT_NEAR(arctg(-1), -0.785398, 1e-6);
 }
 
 TEST(FunctionTesting, test_arctg2) {  
