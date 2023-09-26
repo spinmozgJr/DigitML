@@ -63,8 +63,8 @@ TEST(FunctionTesting, test_vector_of_artcg) {
   std::vector<double> test1 = {-1, 0, 1};
   std::vector<double> test2 = {-0.785398, 0, 0.785398};
   //EXPECT_EQ(n.arctg(test1), test2);
-  EXPECT_THAT(n.arctg(test1), ::testing::Eq(test2));
-  //EXPECT_DOUBLE_EQ(n.arctg(test1), test2);
+  //EXPECT_THAT(n.arctg(test1), ::testing::Eq(test2));
+  EXPECT_DOUBLE_EQ(n.arctg(test1), test2);
 }
 
 TEST(FunctionTesting, test_empty_vector) {
